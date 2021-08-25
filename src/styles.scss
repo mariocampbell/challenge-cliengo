@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+* { padding: 0; margin: 0; box-sizing: border-box; font-family: 'Nunito', sans-serif;; }
+
+ul { list-style: none; }
+a { text-decoration: none; color: inherit; }
+
+.active { box-shadow: inset -5px 0px 0 0 #7d60f5; background: #ece8ff; }
+
+.app {
+  &.layout {
+    display: flex; flex-flow: row nowrap; height: 100vh;
+    aside {
+      background: white; background-color: #f8f8f8; flex: 1 1 auto;
+      max-width: 280px; min-width: 120px;
+      z-index: 99;
+      header { padding: 20px 15px; margin-bottom: 15px; }
+      nav {
+        ul li {
+          transition: all .3s ease;
+          a { padding: 10px 15px; display: block; }
+          &:hover { @extend .active; }
+        }
+      }
+
+      @media (max-width: 900px) { 
+        display: none;
+      }
+    }
+    section {
+      display: flex;
+      flex-flow: column nowrap;
+      flex: 1 0 auto;
+
+      main {
+        flex: 1 1 auto; padding: 0 30px;
+        .page-title h1 { padding: 60px 0 30px 0; }
+      }
+
+      footer {
+        background-color: #7d60f5;
+        color: white;
+        padding: 50px 50px;
+        margin-top: 100px;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: between;
+
+        .title-footer {
+          margin: 5px 0;
+        }
+
+        .fa-heart {
+          &:hover {
+            color: red;
+          }
+        }
+        .by {
+          &:hover {
+            color: #e2e8f0;
+          }
+        }
+      }
+    }
+    .centered { max-width: 80%; margin: 0 auto; }
+  }
+}
+
+.btn-secondary { 
+  border: 1px solid #7d60f5; 
+  font-size: 14px;
+  background: white;
+  border-radius: 999px; 
+  padding: 8px 30px;
+  font-weight: bold; 
+  color: #7d60f5;
+  
+  &:hover {
+    background-color: #7d60f5;
+    color: white;
+  }
+}
+
+.logo{
+  background-image: url('https://res.cloudinary.com/hbrrdozyj/image/upload/v1558546804/cliengo819x195_zxegqs.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 39px;
+}
+
+.logo-white{
+  background-image: url('https://lirp.cdn-website.com/241eff5b/dms3rep/multi/opt/nuevo_logo_cliengo_blanco-1920w.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 25px;
+  width: 100px;
+}
+
+.Toastify__toast--success {
+  background-color: #7d60f5;
+}
+
+.Toastify__toast--info {
+  background-color: #39c2b6;
+}
+
+.nav-bar {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #7d60f5;
+  padding: 16px 50px;
+  box-shadow: 0px 1px 10px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 64px;
+
+  .avatar {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 64px;
+    height: 64px;
+    border: 1px solid #7d60f5;
+    border-radius: 999px;
+  }
+}

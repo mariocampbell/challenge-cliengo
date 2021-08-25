@@ -1,0 +1,34 @@
+.title {
+  display: flex;
+  justify-content: space-between; align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.header-table {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  > tr {
+    display: flex;
+    justify-content: space-between;
+    > th {
+      width: calc(100% / 5); text-align: center; padding: 0 10px; font-weight: 600;
+      &:first-child { text-align: start; }
+      &:last-child { text-align: center; }
+    }
+  }
+}
+
+.user-list {
+  > tr {
+    padding: 15px 0;
+    border-bottom: 1px solid #7d60f5;
+  }
+}
+
+.not-users {
+  color: #ccc;
+  padding: 10px 0;
+  text-align: center;
+}
+
+

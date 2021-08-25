@@ -1,0 +1,20 @@
+.product {
+  display: flex; flex-flow: row; justify-content: space-between;
+
+  >td { 
+    width: calc(100% / 5); text-align: center; padding: 0 10px; font-weight: 300;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    &:first-child { text-align: start; } 
+    &:last-child { text-align: end; display: flex; justify-content: center; }
+
+    .far { padding: 8px 14px; cursor: pointer; color: #222; }
+    .fa-edit {
+      &:hover { color: rgba(26,188,156,1); }
+    }
+    .fa-trash-alt {
+      &:hover { color: red; }
+    }
+  }
+}
